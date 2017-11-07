@@ -1,0 +1,58 @@
+- model_class = Turn
+.page-header
+  h1=t '.title', :default => model_class.model_name.human.titleize
+
+p
+  strong= model_class.human_attribute_name(:metal) + ':'
+  br
+  = @turn.metal
+p
+  strong= model_class.human_attribute_name(:oil) + ':'
+  br
+  = @turn.oil
+p
+  strong= model_class.human_attribute_name(:wood) + ':'
+  br
+  = @turn.wood
+p
+  strong= model_class.human_attribute_name(:food) + ':'
+  br
+  = @turn.food
+p
+  strong= model_class.human_attribute_name(:worker) + ':'
+  br
+  = @turn.worker
+p
+  strong= model_class.human_attribute_name(:mech) + ':'
+  br
+  = @turn.mech
+p
+  strong= model_class.human_attribute_name(:power) + ':'
+  br
+  = @turn.power
+p
+  strong= model_class.human_attribute_name(:popularity) + ':'
+  br
+  = @turn.popularity
+p
+  strong= model_class.human_attribute_name(:coin) + ':'
+  br
+  = @turn.coin
+p
+  strong= model_class.human_attribute_name(:upgrade) + ':'
+  br
+  = @turn.upgrade
+p
+  strong= model_class.human_attribute_name(:enlist) + ':'
+  br
+  = @turn.enlist
+p
+  strong= model_class.human_attribute_name(:structure) + ':'
+  br
+  = @turn.structure
+
+= link_to t('.back', :default => t("helpers.links.back")), turns_path, :class => 'btn btn-default'
+'
+= link_to t('.edit', :default => t("helpers.links.edit")), edit_turn_path(@turn), :class => 'btn btn-default'
+'
+= link_to t('.destroy', :default => t("helpers.links.destroy")), turn_path(@turn), :method => "delete", :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-danger'

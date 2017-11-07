@@ -1,0 +1,6 @@
+= simple_form_for @play, :html => { :class => "form-horizontal" } do |f|
+  = f.association :faction
+  = f.association :nation
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), plays_path, :class => 'btn btn-default'

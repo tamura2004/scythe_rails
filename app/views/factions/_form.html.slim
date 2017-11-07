@@ -1,0 +1,10 @@
+= simple_form_for @faction, :html => { :class => "form-horizontal" } do |f|
+  = f.input :name
+  = error_span(@faction[:name])
+  = f.input :power
+  = error_span(@faction[:power])
+  = f.input :card
+  = error_span(@faction[:card])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), factions_path, :class => 'btn btn-default'

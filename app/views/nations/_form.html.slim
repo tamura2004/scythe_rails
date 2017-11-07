@@ -1,0 +1,10 @@
+= simple_form_for @nation, :html => { :class => "form-horizontal" } do |f|
+  = f.input :name
+  = error_span(@nation[:name])
+  = f.input :popularity
+  = error_span(@nation[:popularity])
+  = f.input :coin
+  = error_span(@nation[:coin])
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), nations_path, :class => 'btn btn-default'

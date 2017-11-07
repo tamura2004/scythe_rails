@@ -1,0 +1,26 @@
+- model_class = Nation
+.page-header
+  h1=t '.title', :default => model_class.model_name.human.pluralize.titleize
+table.table.table-striped
+  thead
+    tr
+      th= model_class.human_attribute_name(:id)
+      th= model_class.human_attribute_name(:name)
+      th= model_class.human_attribute_name(:popularity)
+      th= model_class.human_attribute_name(:coin)
+      th=t '.actions', :default => t("helpers.actions")
+  tbody
+    - @nations.each do |nation|
+      tr
+        td= link_to nation.id, nation_path(nation)
+        td= nation.name
+        td= nation.popularity
+        td= nation.coin
+        td
+          = link_to t('.show', :default => t("helpers.links.show")), nation_path(nation), :class => 'btn btn-default btn-xs'
+          '
+          = link_to t('.edit', :default => t("helpers.links.edit")), edit_nation_path(nation), :class => 'btn btn-default btn-xs'
+          '
+          = link_to t('.destroy', :default => t("helpers.links.destroy")), nation_path(nation), :method => :delete, :data => { :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')) }, :class => 'btn btn-xs btn-danger'
+
+= link_to t('.new', :default => t("helpers.links.new")), new_nation_path, :class => 'btn btn-primary'

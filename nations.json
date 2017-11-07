@@ -1,0 +1,44 @@
+[
+{
+"id": 1,
+"name": "Patriotic",
+"popularity": 2,
+"coin": 6
+},
+{
+"id": 2,
+"name": "Engineering",
+"popularity": 2,
+"coin": 5
+},
+{
+"id": 3,
+"name": "Industrial",
+"popularity": 2,
+"coin": 4
+},
+{
+"id": 4,
+"name": "Agricultural",
+"popularity": 4,
+"coin": 7
+},
+{
+"id": 5,
+"name": "Mechanical",
+"popularity": 3,
+"coin": 6
+},
+{
+"id": 6,
+"name": "Innovative",
+"popularity": 3,
+"coin": 5
+},
+{
+"id": 7,
+"name": "Militant",
+"popularity": 3,
+"coin": 4
+}
+]

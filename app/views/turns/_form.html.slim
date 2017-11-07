@@ -1,0 +1,13 @@
+- range = (-4..8).to_a
+- fields = %i(metal oil wood food worker mech power popularity coin upgrade enlist structure)
+= bootstrap_form_for [@play, @turn] do |f|
+  .row
+    - 4.times do |i|
+      .col-xs-2
+        - 3.times do |j|
+          - field = fields[i+j*4]
+          = f.select field, range, selected: 0, label: @play.label(field)
+
+  = f.button :submit, :class => 'btn-primary'
+  '
+  = link_to t('.cancel', :default => t("helpers.links.cancel")), play_turns_path(@play), :class => 'btn btn-default'
